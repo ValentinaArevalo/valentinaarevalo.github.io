@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://unpkg.com/@uiw/reset.css/reset.css');
+
+h1 {
+    font-family: "Playfair Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+header {
+    background-color: rgb(214, 255, 241);
+}
+main {
+    background-color: rgb(255, 207, 235);
+}
+aside {
+    background-color: rgb(196, 248, 248);
+}
+footer {
+    background-color: rgb(255, 218, 159);
+}
+
+/* diseño responsivo con media queries, movil */
+
+@media (max-width:600px) {
+    /* body {
+        background: rgb(255, 195, 230);
+    } */
+     #countainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        gap:1rem;
+     }
+}
+
+/* diseño responsivo con media quieries, tablet para arriba */
+
+@media (min-width:600px) {
+    /*body {
+    background: #00800
+    } */
+
+    #container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        gap: 1rem;
+        grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "principal principal lado"
+        "pie pie pie";
+    }
+    header {
+        grid-area: cabeza;
+    }
+    main {
+        grid-area: principal;
+    }
+    aside {
+        grid-area: lado;
+        /* grid-area: 1 / 2 / 3 / 4 / 5; */
+    }
+    footer {
+        grid-area: pie;
+    }
+
+}
+
+/*Imagenes*/
+img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .clip-me {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  
+  }
+   /* Controlar el espacio entre párrafos */
+   p {
+    margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
+}
+
+/* Justificar texto en los párrafos */
+p {
+    text-align: justify;
+}
+li {
+    text-align: justify;
+}
+/* Añadir espacio entre el contenido y el borde del sitio */
+body {
+    padding: 20px; /* Espacio de 20px en todos los lados */
+}
+main {
+    padding: 20px; /* Espacio de 20px en todos los lados */
+}
+
+/* Opción: También puedes añadir márgenes a los párrafos */
+p {
+    margin-bottom: 20px; /* Separación entre párrafos */
+}
